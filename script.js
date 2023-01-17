@@ -1,4 +1,3 @@
-// open cart modal
 const cart = document.querySelector('#cart');
 const cartModalOverlay = document.querySelector('.cart-modal-overlay');
 
@@ -9,9 +8,6 @@ cart.addEventListener('click', () => {
     cartModalOverlay.style.transform = 'translateX(-200%)';
   }
 })
-// end of open cart modal
-
-// close cart modal
 const closeBtn = document.querySelector ('#close-btn');
 
 closeBtn.addEventListener('click', () => {
@@ -23,9 +19,7 @@ cartModalOverlay.addEventListener('click', (e) => {
     cartModalOverlay.style.transform = 'translateX(-200%)'
   }
 })
-// end of close cart modal
 
-// add products to cart
 const addToCart = document.getElementsByClassName('add-to-cart');
 const productRow = document.getElementsByClassName('product-row');
 
@@ -72,9 +66,7 @@ function addItemToCart (price, imageSrc) {
   productRow.getElementsByClassName('product-quantity')[0].addEventListener('change', changeQuantity)
   updateCartPrice()
 }
-// end of add products to cart
 
-// Remove products from cart
 const removeBtn = document.getElementsByClassName('remove-btn');
 for (var i = 0; i < removeBtn.length; i++) {
   button = removeBtn[i]
@@ -102,9 +94,7 @@ function changeQuantity(event) {
   }
   updateCartPrice()
 }
-// end of update quantity input
 
-// update total price
 function updateCartPrice() {
   var total = 0
   for (var i = 0; i < productRow.length; i += 2) {
@@ -120,9 +110,7 @@ function updateCartPrice() {
 
 document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2
 }
-// end of update total price
 
-// purchase items
 const purchaseBtn = document.querySelector('.purchase-btn');
 
 const closeCartModal = document.querySelector('.cart-modal');
@@ -139,6 +127,3 @@ function purchaseBtnClicked () {
  }
   updateCartPrice()
 }
-// end of purchase items
-
-//alert user if cart is empty
