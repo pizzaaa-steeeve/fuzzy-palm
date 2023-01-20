@@ -79,7 +79,6 @@ function removeItem (event) {
   updateCartPrice()
 }
 
-// update quantity input
 var quantityInput = document.getElementsByClassName('product-quantity')[0];
 
 for (var i = 0; i < quantityInput; i++){
